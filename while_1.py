@@ -33,5 +33,15 @@ else:
         i += 1
         j-= 1
         dl -= 1
-        
-        
+      
+    
+# вариант 2    
+word = input()
+while len(word)>= 1:
+    print(word)
+    word = word[1:-1]     
+    
+    
+    
+    
+    
