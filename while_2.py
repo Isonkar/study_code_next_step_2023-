@@ -18,10 +18,9 @@
 
 
 
-a = input()
+n = input()
 
-while int(a[0])!=1 and int(a)<10**9:
-    n = int(a[0])*int(a)
-    n = str(a)
-
-print(a)
+while int(n[0]) != 1 and int(n) < 10**9:
+    n = int(n[0]) * int(n)
+    n = str(n)
+print(n)
