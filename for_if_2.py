@@ -28,3 +28,11 @@ for i in range(int(input())):
         
 
 print(*result_list, sep =', ')
+
+
+#в одну строку
+print(*(s for s in (input() for _ in range(int(input()))) if not s.count('соль')), sep=', ')
+
+#в одну строку 2
+print(*[i for i in [input() for i in range(int(input()))] if "соль" not in i], sep=", ")
+
