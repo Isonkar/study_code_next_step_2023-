@@ -24,3 +24,11 @@ for i in range(len(lst)):
         break
 if cnt == 0:
     print('ErrorValue')
+
+#вариант второй(break and else)
+lst, x = input().split(), int(input())
+for i in range(len(lst)):
+    if int(lst[i]) == x:
+        print(i + 1)
+        break
+else:print('ErrorValue')
