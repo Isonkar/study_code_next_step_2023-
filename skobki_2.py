@@ -27,3 +27,25 @@ elif any([ i for i in ('[)', '[}', '(]', '(}', '{]', '{)') if i in string]):
         
 else:
     print('YES')
+
+# вариант второй (реплейс)
+pattern = input()
+for i in range(len(pattern) // 2):
+    pattern = pattern.replace('{}', '')
+    pattern = pattern.replace('()', '')
+    pattern = pattern.replace('[]', '')
+print('YES' if len(pattern) == 0 else 'NO')
+
+# вариант три (СТЕКОВЫЙ)
+s, match, stack = input(), {'[]', '{}', '()'}, ['-']
+if len(s) % 2 != 0:
+    print('NO')
+else:    
+    for c in s:
+        if c in '[({':
+            stack.append(c)
+        elif (stack.pop() + c) not in match:
+            print('NO')
+            break
+    else:
+        print(('NO', 'YES')[stack[-1] == '-'])
