@@ -22,7 +22,7 @@ string = input()
 
 if string.count('(') != string.count(')') or string.count('[') != string.count(']') or string.count('{') != string.count('}'):
     print('NO')
-elif any([ _ for _ in ('[)', '[}', '(]', '(}', '{]', '{)') if _ in string]):
+elif any([ i for i in ('[)', '[}', '(]', '(}', '{]', '{)') if i in string]):
     print('NO')
         
 else:
