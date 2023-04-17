@@ -22,3 +22,7 @@ with open('in.txt') as in_file, open('out.txt',"w") as out:
     lst = lst[::-1]
     for elem in lst:
         out.write(elem + '\n')
+
+  # вариант два      
+ with open('dataset_24465_4.txt', 'r') as fr, open('dataset_24465_4_w.txt', 'w') as fw:
+    fw.writelines(fr.readlines()[::-1])
