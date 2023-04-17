@@ -20,4 +20,16 @@ for i in a:
 for i in range(max(a) + 1):
     if count[i] > 0:        #данной проверкой не печатаем элементы с нудевым значением
         print(i, count[i])
-    
+
+        
+#универсальный вариант   
+
+n = list(input())
+minimum = min(map(int, n))
+maximum = max(map(int, n))
+count = [0] * (maximum - minimum + 1)
+for i in n:
+    count[int(i) - minimum] += 1
+for i in range(len(count)):
+    if count[i] != 0:
+        print(i + minimum, count[i])
