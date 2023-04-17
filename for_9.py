@@ -17,3 +17,13 @@ for i in lst1:
         lst2.append(i.lower())
         lst3.append(i)
 print(*lst3)
+
+
+#вариант 2 (сразу печать)
+lst1 = input().split()
+lst2 = []
+
+for i in lst1:
+    if i.lower() not in lst2:
+        lst2.append(i.lower())
+        print(i, end=' ')
