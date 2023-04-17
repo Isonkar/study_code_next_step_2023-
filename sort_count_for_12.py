@@ -19,3 +19,14 @@ for i in lst:
 for i in range((maximum - minimum) + 1):
     if count[i] > 0:
         print((str(i + minimum) + ' ') * count[i], end='')
+        
+        
+ # мой вариант
+n = int(input())
+lst = list(map(int, input().split()))
+count = [0] * (max(lst) + 1)
+for i in lst:
+    count[i] += 1
+for i in range(max(lst) + 1):
+    if count[i] > 0:
+        print((str(i) + ' ') * count[i], end='')
