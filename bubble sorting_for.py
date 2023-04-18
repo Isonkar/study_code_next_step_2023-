@@ -19,3 +19,16 @@ for d in range(a):
     print(b[d], end=' ')
 print()
 print(c)
+
+#вариант два(тоже, только вывод другой)
+
+n = int(input())
+s = list(map(int, input().split()))
+count = 0
+for _ in range(n - 1):
+    for j in range(n - 1):
+        if s[j] > s[j + 1]:
+            s[j], s[j + 1] = s[j + 1], s[j]
+            count += 1
+print(*s)
+print(count)
