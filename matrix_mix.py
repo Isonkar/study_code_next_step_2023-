@@ -17,6 +17,41 @@ Sample Output 1:
 9 0 4 3 3
 1 5 8 3 7
 2 1 7 8 0
+
+
+ДЛЯ ПРИМЕРА ОСТАВЛЮ ЗДЕСЬ
+Вот матрица m:
+    a a b b
+    a a b b
+    c c d d
+    c c d d 
+Вложенный цикл с m[i][j] вернёт матрицу  как она есть:
+a a b b 
+a a b b
+c c d d
+c c d d 
+Вложенный цикл с  m[j][i] отразит матрицу по главной диагонали:
+a a c c
+a a c c
+b b d d
+b b d d 
+тот же код с m[~i][j] отразит верх и низ:
+c c d d
+c c d d
+a a b b
+a a b b
+m[i][~j] отразит лево и право
+b b a a
+b b a a
+d d c c
+d d c c 
+m[~j][~i] отразит лево и право относительно побочной диагонали:
+d d b b
+d d b b
+c c a a
+c c a a
+
+
 '''
 
 n = int(input())
