@@ -55,10 +55,10 @@ c c a a
 '''
 
 n = int(input())
-matrix = []
-for i in range(n):
-    row = list(map(int, input().split()))
-    matrix.append(row)
+matrix = [list(map(int, input().split())) for _ in range(n)]
+# for i in range(n):
+#     row = list(map(int, input().split()))
+#     matrix.append(row)
 
 for j in range(n):
     for i in range(n):
