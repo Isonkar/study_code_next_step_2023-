@@ -23,17 +23,39 @@ No
 
 n = int(input())
 matrix = [list(map(int, input().split())) for _ in range(n)]
-
 sum_row = 0
 lst1 = []
 lst2 = []
-
 for i in range(n):
     for j in range(-1, i - n , -1):
         lst1.append(matrix[i][j])          
-
 for i in range(n):
     for j in range(-1, i - n , -1):
         lst2.append(matrix[j][i])   
-
 print('Yes' if lst1 - lst2 == 0 else 'No')
+
+
+#вариант два(сократил один цикл)
+n = int(input())
+matrix = [list(map(int, input().split())) for _ in range(n)]
+lst1 = []
+lst2 = []
+for i in range(n):
+    for j in range(-1, i - n , -1):
+        lst1.append(matrix[i][j])          
+        lst2.append(matrix[j][i])
+print('Yes' if sum(lst1) - sum(lst2) == 0 else 'No')
+
+#вариант три(оптимизация кода, с использованием конструкции break for else)
+n = int(input())
+matrix = [list(map(int, input().split())) for _ in range(n)]
+for i in range(n):
+    for j in range(-1, i - n , -1):
+        if matrix[i][j] != matrix[j][i]:
+            print('No')
+            break
+    break       
+else:
+    print('Yes')
+
+
