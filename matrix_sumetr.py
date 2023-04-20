@@ -48,14 +48,14 @@ print('Yes' if sum(lst1) - sum(lst2) == 0 else 'No')
 
 #вариант три(оптимизация кода, с использованием конструкции break for else)
 n = int(input())
+flag = 0
 matrix = [list(map(int, input().split())) for _ in range(n)]
 for i in range(n):
     for j in range(-1, i - n , -1):
         if matrix[i][j] != matrix[j][i]:
-            print('No')
-            break
-    break       
+            flag += 1
+            break      
 else:
-    print('Yes')
+    print('Yes' if flag == 0 else 'No')
 
 
