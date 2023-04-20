@@ -37,4 +37,16 @@ for i in range(n):
 print(x)
 print(*coords)
 
+#чуть модифицированный код
 
+a, b = map(int, input().split())
+winner = [0, [0, 0]]
+m = [list(map(int, input().split())) for _ in range(a)]
+for i in range(a):
+    for j in range(b):
+        if m[i][j] > winner[0]:
+            winner[0] = m[i][j]
+            winner[1][0], winner[1][1] = i, j
+
+print(winner[0])    
+print(*winner[1])
