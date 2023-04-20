@@ -36,3 +36,12 @@ for j in range(m):
         sum_col += matrix[i][j]
     print(sum_col, end=' ')
     sum_col = 0
+
+    
+    
+#вариант два
+n,m=map(int,input().split())
+s=[list(map(int,input().split())) for i in range(n)]
+
+print(*[sum(s[i][j] for j in range(m)) for i in range(n)])
+print(*[sum(s[i][j] for i in range(n)) for j in range(m)])
