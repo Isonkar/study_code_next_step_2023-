@@ -43,3 +43,8 @@ for i in range(n):
 
 lst.sort()
 print(lst.count(lst[-1]))
+
+# вариант два
+n, m = map(int, input().split())
+lst = [max(list(map(int, input().split()))) for i in range(n)]  # стичитываем строки и сразу находим максимум и в список lst попадают сразу максимальные значения
+print(lst.count(max(lst)))                                      # ищем count макс значений
