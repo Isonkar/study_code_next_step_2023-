@@ -219,4 +219,11 @@ pattern = r'human'
 for line in sys.stdin:
     line = line.rstrip()
     print(re.sub(pattern, 'computer', line))
+
+    
+    # вариант два
+import re
+import sys
+
+sys.stdout.writelines(re.sub('human', 'computer', sys.stdin.read()))
 #_____________________________________________________________________________________________________________
