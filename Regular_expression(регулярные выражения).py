@@ -131,4 +131,29 @@ def search(line):
 for line in sys.stdin:
     search(line.rstrip())
 
+#_________________________________________________________________________________________________________________
+'''
+Задача 3
+Вам дана последовательность строк.
+Выведите строки, содержащие две буквы "z", между которыми ровно три символа.
 
+Sample Input:
+zabcz
+zzz
+zzxzz
+zz
+zxz
+zzxzxxz
+
+Sample Output:
+zabcz
+zzxzz
+'''
+
+import sys, re
+
+pattern = r'z...z'
+for line in sys.stdin:
+    line = line.rstrip()
+    if len(re.findall(pattern, line)) > 0:
+        print(line)
