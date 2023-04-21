@@ -75,6 +75,19 @@ for line in sys.stdin:
     if len(re.findall(pattern, line)) > 1:
         print(line)
 
+ # вариант два
+import re
+import sys
+# Читаем строки из stdin и удаляем символы переноса строки в конце каждой строки
+lines = [line.rstrip() for line in sys.stdin]
+# Перебираем строки и выводим те, в которых "cat" встречается хотя бы два раза
+for line in lines:
+    matches = re.findall("cat", line)
+    if len(matches) >= 2:
+        print(line)
+        
+        
+        
 #________________________________________________________________________________________________________________________
 
 
