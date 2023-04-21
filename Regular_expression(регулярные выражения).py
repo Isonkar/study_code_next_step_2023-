@@ -167,4 +167,35 @@ for line in sys.stdin:
     if re.search(pattern, line) != None:
         print(line)
         
-        
+#_____________________________________________________________________________________________________
+'''Вам дана последовательность строк.
+Выведите строки, содержащие слово, состоящее из двух одинаковых частей (тандемный повтор).
+
+Sample Input:
+blabla is a tandem repetition
+123123 is good too
+go go
+aaa
+
+Sample Output:
+blabla is a tandem repetition
+123123 is good too
+'''
+
+import sys, re
+
+pattern = r'\b(\w+)\1\b'
+for line in sys.stdin:
+    line = line.rstrip()
+    if len(re.findall(pattern, line)) > 0:
+        print(line)
+ 
+# вариант два
+
+import sys, re
+
+pattern = r"\b(\w+)\1\b"
+for line in sys.stdin:
+    line = line.rstrip()
+    if (re.search(pattern, line)): print(line)
+ 
