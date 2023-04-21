@@ -89,7 +89,46 @@ for line in lines:
         
         
 #________________________________________________________________________________________________________________________
+'''
+Задача 2:
+Вам дана последовательность строк.
+Выведите строки, содержащие "cat" в качестве слова.
+Примечание:
+Для работы со словами используйте группы символов \b и \B.
 
+Sample Input:
+cat
+catapult and cat
+catcat
+concat
+Cat
+"cat"
+!cat?
 
+Sample Output:
+cat
+catapult and cat
+"cat"
+!cat?
+'''
+
+import sys, re
+
+pattern = r'\bcat\b'
+for line in sys.stdin:
+    line = line.rstrip()
+    if len(re.findall(pattern, line)):
+        print(line)
+
+# вариант два
+
+import re
+import sys
+
+def search(line):
+    if re.search(r'\bcat\b|\Bcat\B', line):
+        print(line)
+for line in sys.stdin:
+    search(line.rstrip())
 
 
