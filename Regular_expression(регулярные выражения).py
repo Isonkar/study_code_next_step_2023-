@@ -271,3 +271,11 @@ pattern = r'\b(\w)(\w)+?'
 for line in sys.stdin:
     line = line.rstrip()
     print(re.sub(pattern, r'\2\1', line))
+#вариант два    
+import re
+import sys
+
+for line in sys.stdin:
+    line = line.strip()
+    line = re.sub(r"\b(\w)(\w)(\w*)\b", r"\2\1\3", line)
+    print(line)
