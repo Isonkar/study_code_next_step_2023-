@@ -66,3 +66,9 @@ for i in lst_1:
     k += lst_2.count(i)
      
 print(k)
+
+
+#вариант три
+
+x=' '.join([input() for _ in ' '*int(input())]).split()
+print(sum(x[::2].count(i) for i in x[1::2]))
