@@ -43,6 +43,25 @@ Sample Output 2:
 
 
 '''
+#мой вариант (подсмотрел вариант как реализовать не выход из индекса)
+n, m = map(int, input().split())
+z = [list(''.join(input())) for _ in range(n)]
+
+k = 0
+
+for i in range(n):
+    for j in range(m):
+        if z[i][j] == '.':
+            if z[i][j] == z[i][min(j + 1, m -1)]:
+                if z[i][j] == z[i][max(j - 1, 0)]:
+                    if z[i][j] == z[max(i - 1, 0)][j]:
+                        if z[i][j] == z[min(i + 1, n - 1)][j]:
+                            k += 1
+
+            
+print(k)
+
+#вариант следующий
 
 n, m = map(int, input().split())
 z = [list(''.join(input())) for _ in range(n)]
