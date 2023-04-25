@@ -1,23 +1,11 @@
-n = int(input())
-lst = list(map(int, input().split()))
+n, m = map(int, input().split())
 
-mat = [[i * 0  for i in range(n)] for _ in range(n)]
-
-for i in range(n):
-    for j in range(i + 1, n):
-        mat[i][j] = lst[0]
-
-for i in range(n):
-    for j in range(i + 1, n):
-        mat[j][i] = lst[1]
+mat = [list(map(int, input().split())) for _ in range(n)]
 
 
-for i in range(n):
-    for j in range(n):
-      if i == j:  
-          mat[j][i] = lst[3]
+for i in range(1, n - 1):
+    for j in range(1, m - 1):
+        mat[i,j] = mat[i - 1][j] + mat[i - 1][j - 1]
 
-
-
-for i in mat:
-    print(*i)
+for row in mat:
+    print(*row)
