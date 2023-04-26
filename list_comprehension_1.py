@@ -85,7 +85,14 @@ Sample Output 1:
 ['A', 'B', 'C']
 '''
 
+from string import ascii_uppercase
+print([ascii_uppercase[i] * (i + 1) for i in range(int(input()))])
 
+'''
+Давайте усовершенствуем предыдущую задачу так, чтобы получался следующий список букв:
+
+['A', 'BB', 'CCC', 'DDDD', 'EEEEE', 'FFFFFF', ...]
+'''
 
 
 
