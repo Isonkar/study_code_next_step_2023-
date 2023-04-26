@@ -68,7 +68,22 @@ print([i[0] for i in list(map(str, st.split()))])
 st = 'Create a list of the first letters of every word in this string'
 '''
 
-
+from string import ascii_uppercase
+print([i for i in ascii_uppercase[:int(input())]])
+'''
+При помощи list comprehension создайте список, состоящий из первых n заглавных букв английского алфавита ['A', 'B', 'C', 'D', ...]. 
+Получить все заглавные буквы английского алфавита можно следующим образом:
+from string import ascii_uppercase
+print(ascii_uppercase) # выведет строку ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Входные данные
+На вход программе подается натуральное число n, n≤26.
+Формат выходных данных
+Программа должна вывести список из первых n заглавных букв английского алфавита
+Sample Input 1:
+3
+Sample Output 1:
+['A', 'B', 'C']
+'''
 
 
 
