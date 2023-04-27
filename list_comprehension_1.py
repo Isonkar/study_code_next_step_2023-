@@ -95,7 +95,7 @@ print([ascii_uppercase[i] * (i + 1) for i in range(int(input()))])
 
 
 phrase = 'Take only the words that start with t in this sentence'
-print([i for i in list(phrase.split()) if i.lower().startswith('t')])
+print([i for i in list(phrase.split()) if i.lower().startswith('t')])   # в методе startswith можно перечеслять аргументы т.е. можно было написать .startswith('t','T')
 
 # тоже самое только более развернуто
 phrase = 'Take only the words that start with t in this sentence'
