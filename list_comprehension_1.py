@@ -90,9 +90,22 @@ print([ascii_uppercase[i] * (i + 1) for i in range(int(input()))])
 
 '''
 Давайте усовершенствуем предыдущую задачу так, чтобы получался следующий список букв:
-
 ['A', 'BB', 'CCC', 'DDDD', 'EEEEE', 'FFFFFF', ...]
 '''
 
 
+phrase = 'Take only the words that start with t in this sentence'
+print([i for i in list(phrase.split()) if i.lower().startswith('t')])
+
+# тоже самое только более развернуто
+phrase = 'Take only the words that start with t in this sentence'
+phrase_lst = list(phrase.split())
+res = [i for i in phrase_lst if i.lower().startswith('t')]
+print(res)
+
+'''
+При помощи генератора-списков создайте список, состоящий из слов,  начинающихся с буквы 't' или 'T'. 
+Слова возьмите из переменной phrase, также не забывайте про метод split()
+В качестве ответа выведите полученный список, слова в нем должны стоять в том же порядке, в котором они стояли в изначальной фразе
+'''
 
