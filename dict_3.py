@@ -20,3 +20,4 @@ for key in account:
 print(keys)
 
 #  вариант два
+print((keys := list(account)))
