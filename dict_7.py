@@ -22,4 +22,11 @@ for i in range(len(a) - 2):
 print(result_dict)
 
 #  вариант два
-
+'''
+Функция reduce (): Функция reduce (), как можно понять из названия, применяет переданную функцию к итерируемому объекту и возвращает одно значение.
+Синтаксис: reduce (function, iterables). Здесь функция определяет, какое выражение необходимо применить к итерируемому объекту.
+Эту функцию необходимо импортировать из модуля functools. Пример: from functools import reduce reduce (lambda a, b: a + b, [23, 21, 45, 98]) 
+Результат: 187.
+'''
+from functools import reduce  
+print(reduce(lambda x,y:{y:x},list(map(int,input().split()))[::-1]))
