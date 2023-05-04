@@ -30,3 +30,10 @@ Sample Output:
 ('Purple', 'XL'), ('Purple', 'XLL'), ('Black', 'S'), ('Black', 'M'), ('Black', 'L'), ('Black', 'XL'), ('Black', 'XLL'), ('Green', 'S'),
 ('Green', 'M'), ('Green', 'L'), ('Green', 'XL'), ('Green', 'XLL')]
 '''
+
+colors = ['White', 'Blue', 'Yellow', 'Purple', 'Black', 'Green']
+sizes = ['S', 'M', 'L', 'XL', 'XLL']
+
+print([(colors[j], sizes[i]) for j in range(len(colors)) for i in range(len(sizes))])
+
+
