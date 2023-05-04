@@ -33,7 +33,9 @@ Sample Output:
 
 colors = ['White', 'Blue', 'Yellow', 'Purple', 'Black', 'Green']
 sizes = ['S', 'M', 'L', 'XL', 'XLL']
-
 print([(colors[j], sizes[i]) for j in range(len(colors)) for i in range(len(sizes))])
 
+#  var 2
+from itertools import product as decart
 
+print(list(decart(colors, sizes)))
