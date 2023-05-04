@@ -35,6 +35,9 @@ colors = ['White', 'Blue', 'Yellow', 'Purple', 'Black', 'Green']
 sizes = ['S', 'M', 'L', 'XL', 'XLL']
 print([(colors[j], sizes[i]) for j in range(len(colors)) for i in range(len(sizes))])
 
+
+#  или так print([(color, size) for color in colors for size in sizes])
+
 #  var 2
 from itertools import product as decart
 
