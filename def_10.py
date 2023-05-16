@@ -38,3 +38,13 @@ assert get_domain_name("https://www.siemens.com") == 'siemens'
 assert get_domain_name("https://www.whatsapp.com") == 'whatsapp'
 assert get_domain_name("https://www.mywww.com") == 'mywww'
 print('Проверки пройдены')
+
+
+# var 2
+def get_domain_name(url):
+    for protocol in ['http://', 'https://', 'www.', 'https://www.', 'http://www.']:
+        url = url.replace(protocol, '', 1)
+    print(url[:url.find('.')])
+
+url = "https://www.mywww.com"
+get_domain_name(url)
