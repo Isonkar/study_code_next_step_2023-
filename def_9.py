@@ -29,3 +29,10 @@ def find_dublicate(lst):
     return res_list
 
 print(find_dublicate([8, 7, 6, 5, 4, 3, 4, 5, 6, 7, 8]))
+
+# var 2
+
+def find_duplicate(n):
+    b = []
+    [b.append(i) for i in n if i not in b and n.count(i) > 1]
+    return(b)
