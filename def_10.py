@@ -1,38 +1,19 @@
-'''
-Напишите функцию first_unique_char, которая принимает строку символов и возвращает целое число: позицию первого уникального символа в строке. 
-В случае, если уникальных символов в переданной строке нет, верните -1. Регистр символов не учитывайте.
-Ваша задача написать только определение функции first_unique_char
+def get_domain_name(url):
+    protocols = ['http://', 'https://', 'www.', 'https://www.', 'http://www.']
+    for protocol in protocols:
+        if protocol in url:
+            url = url.replace(protocol, '', 1)
+    return url[:url.find('.')]
 
-Sample Input 1:
+# код ниже не стоит удалять, он нужен для проверки
+assert get_domain_name("http://google.com") == "google"
+assert get_domain_name("http://google.co.jp") == "google"
+assert get_domain_name("www.xakep.ru") == "xakep"
+assert get_domain_name("https://youtube.com") == "youtube"
 
-python
-Sample Output 1:
-
-0
-Sample Input 2:
-
-abracadabra
-Sample Output 2:
-
-4
-'''
-
-def first_unique_char(s):
-    for char in s:
-        if s.count(char) == 1:
-            return s.index(char)
-        else:
-            continue
-    else:
-        return -1
-
-
-s = input()
-print(first_unique_char(s))
-
-# var 2
-def first_unique_char(s):    
-    for i in s:            
-        if s.count(i) == 1 and s.count(i) < 2:
-            return s.index(i)
-    return -1
+assert get_domain_name("http://github.com/carbonfive/raygun") =='github'
+assert get_domain_name("http://www.zombie-bites.com") == 'zombie-bites'
+assert get_domain_name("https://www.siemens.com") == 'siemens'
+assert get_domain_name("https://www.whatsapp.com") == 'whatsapp'
+assert get_domain_name("https://www.mywww.com") == 'mywww'
+print('Проверки пройдены')
