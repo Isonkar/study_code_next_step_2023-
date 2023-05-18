@@ -62,3 +62,14 @@ def first_repeated_word(s: str) -> str|None:
         else:        
            return i
     return None
+
+# var 4
+
+def first_repeated_word(phr: str) -> str | None:
+    "Находит первый дубль в строке"
+    lst_unique = []  # создаем пустой список, куда будем скидывать поочереди слова
+    for word in phr.split():
+        if word in lst_unique:
+            return word  # как только слово повторяется(уже в списке) возвращаем его
+        lst_unique.append(word)
+    return None  # если цикл закнчиваенся (return word не сработал), то дойдем до этой линии
