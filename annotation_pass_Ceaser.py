@@ -37,3 +37,13 @@ def caesar_cipher(letter: str, shift: int) -> str:
                 res += letter
         res += ' '
     return res
+
+# var 2 
+
+def shift_letter(letter: str, step: int) -> str:
+    """Функция сдвигает символ letter на shift позиций"""
+    return chr(97 + (ord(letter) + step - 97) % 26)
+
+def caesar_cipher(text: str, step: int) -> str:
+    """Шифр цезаря"""
+    return ''.join(shift_letter(i, step) if i.isalpha() else i for i in text)
