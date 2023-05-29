@@ -14,3 +14,7 @@ def only_one_positive(*args: int) -> bool:
         if i > 0:
             cnt += 1
     return True if cnt == 1 else False 
+
+# var 2
+def only_one_positive(*args):
+    return len([x for x in args if x > 0]) == 1
