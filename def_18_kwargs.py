@@ -38,3 +38,7 @@ def create_actor(**kwargs):
             base_dict[key] = value
     
     return base_dict
+
+# var 2
+def create_actor(**kwargs):
+    return {'name': 'Райан','surname': 'Рейнольдс','age': 46} | kwargs
