@@ -19,3 +19,9 @@ def print_from(n: int) -> None:
     if n > 1:
         n -= 1
         print_from(n)
+        
+ # var 2
+def print_from(n: int) -> None:
+    if n >= 1:
+        print(n)
+        return print_from(n - 1)
