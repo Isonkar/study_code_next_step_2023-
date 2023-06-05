@@ -44,3 +44,11 @@ def sort_coll(persons: list):
 
 persons = [input() for i in range(int(input()))]
 sort_coll(persons)
+
+#var 2
+
+sp = [input() for _ in range(int(input()))]
+d = {c + ',': sp.count(c) for c in sp}
+result = sorted(d.items(), key=lambda x: x[1])
+print(*result[-1])
+print(*result[0])
