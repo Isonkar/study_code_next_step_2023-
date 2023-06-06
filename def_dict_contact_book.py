@@ -61,3 +61,16 @@ def request_contact(contact_book: dict):
               
 
 request_contact(add_contact())
+
+
+# var 2
+
+phone_book = {}
+
+for _ in range(int(input())):
+    phone, name = input().split()
+    phone_book.setdefault(name, []).append(phone)
+
+for _ in range(int(input())):
+    name = input()
+    print(*phone_book.get(name, ['Неизвестный номер']))
