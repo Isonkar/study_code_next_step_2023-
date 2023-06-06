@@ -60,3 +60,14 @@ def search_b_day(b_day: dict):
                 
 
 search_b_day(b_days())
+
+# var 2
+
+dr = {}
+
+for _ in range(int(input())):
+    name, _, month = input().split()
+    dr.setdefault(month, []).append(name)
+
+for _ in range(int(input())):
+    print(*sorted(dr.get(input(), ['Нет данных'])))
