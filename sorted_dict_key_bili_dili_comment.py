@@ -54,3 +54,15 @@ def sort_dcomment(dcomm: dict):
 
 
 sort_dcomment(dcomment(dc))
+
+
+# var 2
+
+blogers = {'Дили': set(), 'Били': set(), 'Вили': set()}
+
+for s in iter(input, 'конец'):
+    name, user = s.split(': ')
+    blogers[name].add(user)
+  
+for k, v in sorted(blogers.items(), key=lambda x: -len(x[1])):
+    print(f'Количество уникальных комментаторов у {k} - {len(v)}')
